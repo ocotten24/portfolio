@@ -1,345 +1,438 @@
-    @import url('https://fonts.cdnfonts.com/css/pf-square-sans-pro');
+@import url('https://fonts.cdnfonts.com/css/pf-square-sans-pro');
 
 
 
-    * {
-        font-family: 'PF Square Sans Pro', sans-serif;
-        text-decoration: none;      
-        background-color: #fcfdfd00;                              
+* {
+    font-family: 'PF Square Sans Pro', sans-serif;
+    text-decoration: none;      
+    background-color: #fcfdfd00;                 
+}
+
+
+label {
+    background-color: #CC5A7100;
+}
+
+a {
+    color: white;  
+    background-color: #CC5A7100; 
+}
+
+
+.hovertext:hover {
+    position: relative;
+    top: -6pt;
+    transition: 2s;
+    text-decoration:underline;
+}
+
+.bar {
+    z-index: 1;
+    display: flex;
+    justify-self: center;
+    background-color: #CC5A71;
+    border-radius: 15pt;
+    height: 20pt;
+    width: 50%;
+    margin: auto;
+    justify-content: space-around;
+    padding: 25pt;
+    font-size: 2vw;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);  
+    align-items: center;
+}
+
+
+.mobilebars {
+    display: none;
+    z-index: 1;
+}
+
+.name {
+    z-index: 1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 7em;
+    top: 50pt;
+    position: relative;
+    
+}
+
+.jobtitle {
+    text-align: center;
+    justify-content: center;
+    font-size: 3em;
+
+    position: relative;
+    top: 5pt;
+}
+
+
+@media (max-width: 800px) { 
+    .name { 
+        font-size: 10vw;
     }
+    
+}
 
-    label {
-        background-color: #64a9bc00;
-    }
 
-    a {
-        color: white;  
-        background-color: #64a9bc00; 
-    }
-
-    .hovertext:hover {
-        position: relative;
-        top: -6pt;
-        transition: 2s;
-        text-decoration:underline;
-    }
-
+@media (max-width: 575px) {
     .bar {
-        z-index: 1;
-        display: flex;
-        justify-self: center;
-        background-color: #64a9bc;
-        border-radius: 15pt;
-        height: 20pt;
-        width: 50%;
-        margin: auto;
+        display: none;
         justify-content: space-around;
-        padding: 25pt;
-        font-size: 2vw;
-        color: white;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);  
     }
 
+
+    .wavecontainer {
+        bottom: -1000pt;
+        height: 100%;
+    }
 
     .mobilebars {
-        display: none;
-        z-index: 1;
-    }
-
-    .name {
-        z-index: 1;
         display: flex;
+        flex-direction: column;
+        padding: 3pt;
         text-align: center;
-        justify-content: center;
-        font-size: 5em;
+        gap: 25px; 
         
     }
 
-    .jobtitle {
-        text-align: center;
-        justify-content: center;
-        font-size: 2em;
+    .skillbar {
+        z-index: 1;
+        justify-self: center;
+        background-color: #CC5A71;
+        border-radius: 5pt;
+        height: 2em;
+        width: 50%;
+        margin: auto;
+        font-size: 5vw;
+        padding-top: 1em;
+    }
 
-        position: relative;
-        top: -25pt;
+    .aboutbar {
+        z-index: 1;
+        justify-self: center;
+        background-color: #CC5A71;
+        border-radius: 5pt;
+        height: 2em;
+        width: 50%;
+        margin: auto;
+        padding-top: 1em;
+        font-size: 5vw;
+    }
+
+    
+
+    .projectbar {
+        z-index: 1;
+        justify-self: center;
+        background-color: #CC5A71;
+        border-radius: 5pt;
+        height: 2em;
+        width: 50%;
+        margin: auto;
+        padding-top: 1em;
+        font-size: 5vw;
+    
+    }
+
+    .resumebar {
+        z-index: 1;
+        justify-self: center;
+        background-color: #CC5A71;
+        border-radius: 5pt;
+        height: 2em;
+        width: 50%;
+        margin: auto;
+        padding-top: 1em;
+        font-size: 5vw;
+    }
+
+    .contactbar {
+        z-index: 1;
+        justify-self: center;
+        background-color: #CC5A71;
+        border-radius: 5pt;
+        height: 2em;
+        width: 50%;
+        margin: auto;
+        padding-top: 1em;
+        font-size: 5vw;
     }
 
 
-    .bubbles {
+
+}
+
+.skillpopup {
+    display: none;
+    justify-content: space-around;
+    margin: auto;
+    padding: 15pt;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    z-index: 2; 
+    border-radius: 10pt;
+    overflow: auto;
+    
+}
+
+.skillpopup:target {
+    display: flex;
+    padding-top: 15pt;
+    flex-wrap: wrap;
+    transition: 2s;
+    z-index: 2;
+    overflow: auto;
+}
+
+.aboutpopup {
+    display: none;
+    justify-content: space-around;
+    margin: auto;
+    padding: 15pt;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    z-index: 0;
+    border-radius: 10pt;
+    font-size: 2em;
+
+    
+}
+
+.aboutpopup:target {
+    display: flex;
+    padding-top: 15pt;
+    flex-wrap: wrap;
+    transition: 2s;
+    z-index: 0;
+}
+
+.contactpopup {
+    display: none;
+    justify-content: space-around;
+    margin: auto;
+    padding: 15pt;
+    width: 80%;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    z-index: 0;
+    border-radius: 10pt;
+    font-size: 2em;
+
+    
+}
+
+.contactpopup:target {
+    display: flex;
+    padding-top: 15pt;
+    flex-wrap: wrap;
+    transition: 2s;
+    z-index: 0;
+}
+
+.icon {
+    width: 5em;
+}
+
+.icon:hover {
+    transition: .3s;
+    rotate: 360deg;
+}
+
+.contactimage {
+    width: 7em;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.projectpopup {
+    display: none;
+    justify-content: space-around;
+    margin: auto;
+    padding: 15pt;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    z-index: 0;
+    border-radius: 10pt;
+    font-size: 2em;
+
+}
+
+.projectpopup:target {
+    display: flex;
+    padding-top: 15pt;
+    flex-wrap: wrap;
+    transition: 2s;
+    z-index: 2;
+    width: 40%;
+}
+
+.projects {
+    width: 60%;
+    z-index: 1;
+    margin: auto;
+    padding: 0;  
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.projecttext {
+    margin: auto;
+    text-align: center;
+    color: black;
+    
+}
+
+.projectline {
+    width: 100%;
+    background-color: #CC5A71;
+    height: 2px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.projectdescription {
+    font-size: 1em;
+    text-align: center;
+}
+
+.centered-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.centered-link:hover {
+    font-size: 1.2em;
+    transition: .9s;
+}
+
+.abouttext {
+    font-size: 1em;
+    text-align: center;
+}
+
+.bccalink {
+    color: #CC5A71;
+}
+
+.bccalink:hover {
+    text-decoration: underline;
+}
+
+
+.wavecontainer {
+    position: fixed;
+    bottom: -100pt;
+    left: 0;
+    width: 100%;
+    height: auto; /* Adjust the height as needed */
+    z-index: -1;
+    overflow: hidden;
+}
+    
+
+svg path{
+    animation:pathAnim 7s; 
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+svg path:nth-child(2){
+    animation-delay: 1s
+}
+svg path:nth-child(3){
+    animation-delay: 3s
+}
+svg path:nth-child(4){
+    animation-delay: 1s;
+}
+
+@keyframes pathAnim{
+    0%{
+        d: path("M0,192	C220,100,440,100,660,192 C880,290,1100,290,1320,192	L1320 500 L0 500");
+    }
+    25%{
+        d: path("M0,100	C220,100,440,292,660,292 C880,292,1100,100,1320,100	L1320 500 L0 500");
+    }
+    50%{
+        d: path("M0,192	C220,290,440,290,660,192 C880,100,1100,100,1320,192	L1320 500 L0 500");
+    }
+    75%{
+        d: path("M0,292	C220,292,440,100,660,100 C880,100,1100,292,1320,292	L1320 500 L0 500");
+    }
+    100%{
+        d: path("M0,192	C220,100,440,100,660,192 C880,290,1100,290,1320,192	L1320 500 L0 500");
+    }
+
+}
+
+@media (max-width: 575px) {
+    .wavecontainer {
         position: fixed;
-        bottom: -290pt;
-        left: 0;
+        bottom: -10px; /* Adjust this value to make the waves visible on mobile */
+        height: 20%;
         width: 100%;
+        height: auto;
         z-index: -1;
-    }
-
-    @media (max-width: 800px) { 
-        .name { 
-            font-size: 10vw;
-        }
-
-        .bubbles {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            left: 0;
-            z-index: -1;
-    }
-    }
-
-
-    @media (max-width: 575px) {
-        .bar {
-            display: none;
-            justify-content: space-around;
-            padding-bottom: ;
-        }
-
-        .mobilebars {
-            display: flex;
-            flex-direction: column;
-            padding: 3pt;
-            text-align: center;
-            gap: 25px; 
-            
-        }
-
-        .skillbar {
-            z-index: 1;
-            justify-self: center;
-            background-color: #64a9bc;
-            border-radius: 5pt;
-            height: 2em;
-            width: 50%;
-            margin: auto;
-            font-size: 5vw;
-            padding-top: 1em;
-        }
-
-        .aboutbar {
-            z-index: 1;
-            justify-self: center;
-            background-color: #64a9bc;
-            border-radius: 5pt;
-            height: 2em;
-            width: 50%;
-            margin: auto;
-            padding-top: 1em;
-            font-size: 5vw;
-        }
-
-        
-
-        .projectbar {
-            z-index: 1;
-            justify-self: center;
-            background-color: #64a9bc;
-            border-radius: 5pt;
-            height: 2em;
-            width: 50%;
-            margin: auto;
-            padding-top: 1em;
-            font-size: 5vw;
-        
-        }
-
-        .resumebar {
-            z-index: 1;
-            justify-self: center;
-            background-color: #64a9bc;
-            border-radius: 5pt;
-            height: 2em;
-            width: 50%;
-            margin: auto;
-            padding-top: 1em;
-            font-size: 5vw;
-        }
-
-        .contactbar {
-            z-index: 1;
-            justify-self: center;
-            background-color: #64a9bc;
-            border-radius: 5pt;
-            height: 2em;
-            width: 50%;
-            margin: auto;
-            padding-top: 1em;
-            font-size: 5vw;
-        }
-
-
-
-    }
-
-    .skillpopup {
-        display: none;
-        justify-content: space-around;
-        margin: auto;
-        padding: 15pt;
-        width: 80%;
-        background-color: #fff;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-        z-index: 2; 
-        border-radius: 10pt;
-        overflow: auto;
-        
-    }
-
-    .skillpopup:target {
-        display: flex;
-        padding-top: 15pt;
-        flex-wrap: wrap;
-        transition: 2s;
-        z-index: 2;
-        overflow: auto;
-    }
-
-    .aboutpopup {
-        display: none;
-        justify-content: space-around;
-        margin: auto;
-        padding: 15pt;
-        width: 80%;
-        background-color: white;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-        z-index: 0;
-        border-radius: 10pt;
-
-        
-    }
-
-    .aboutpopup:target {
-        display: flex;
-        padding-top: 15pt;
-        flex-wrap: wrap;
-        transition: 2s;
-        z-index: 0;
-    }
-
-    .contactpopup {
-        display: none;
-        justify-content: space-around;
-        margin: auto;
-        padding: 15pt;
-        width: 80%;
-        background-color: white;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-        z-index: 0;
-        border-radius: 10pt;
-
-        
-    }
-
-    .contactpopup:target {
-        display: flex;
-        padding-top: 15pt;
-        flex-wrap: wrap;
-        transition: 2s;
-        z-index: 0;
-    }
-
-    .icon {
-        width: 5em;
-    }
-
-    .icon:hover {
-        transition: .3s;
-        rotate: 360deg;
-    }
-
-    .contactimage {
-        width: 7em;
-    }
-
-    .contacts {
-        background-color: white;
-    }
-
-    .contacts:hover {
-        background-color:#64a9bc;
-        transition: .8s;
-    }
-
-    .email {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1em;
-        background-color: white;
+        overflow: hidden;
     }
 
     .projectpopup {
-        display: none;
-        justify-content: space-around;
-        margin: auto;
-        padding: 15pt;
-        width: 80%;
-        background-color: white;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-        z-index: 0;
-        border-radius: 10pt;
-
-    }
-
-    .projectpopup:target {
-        display: flex;
-        padding-top: 15pt;
-        flex-wrap: wrap;
-        transition: 2s;
-        z-index: 2;
-        width: 40%;
-    }
-
-    .projects {
-        width: 60%;
-        z-index: 1;
-        margin: auto;
-        padding: 0;  
-        align-self: center;
-        display: flex;
-        justify-content: center;
-    }
-
-    .projecttext {
-        margin: auto;
-        text-align: center;
-        color: black;
-        
-    }
-
-    .projectline {
-        width: 100%;
-        background-color: #64a9bc;
-        height: 2px;
-        margin: 0;
-        padding: 0;
-        
-    }
-
-    .projectdescription {
         font-size: 1em;
-        text-align: center;
     }
-
-    .centered-link {
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .centered-link:hover {
+    
+    .contactpopup {
         font-size: 1.2em;
-        transition: .9s;
     }
 
-    .abouttext {
-        font-size: 1em;
-        text-align: center;
+    .aboutpopup {
+        font-size: 1.2em;
+    }
+}    
+
+.darkmode {
+    background-color: black;
+    color: #CC5A71;
+
+    .aboutpopup, .projectpopup, .contactpopup, .skillpopup, .projectdescription, .projecttext {
+        background-color: black;
+        color: white;
     }
 
-    .bccalink {
-        color: #64a9bc;
+    .icon {
+        filter: invert(1);
     }
 
-    .bccalink:hover {
-        text-decoration: underline;
+    .contactimage {
+        filter: invert(1);
     }
+
+   
+}
+
+.buttondiv {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.btn {
+    width: 5%;
+    padding-bottom: 10pt;
+    position: relative;
+    top: -5pt
+}
