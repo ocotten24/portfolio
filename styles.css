@@ -63,7 +63,7 @@ a {
 .jobtitle {
     text-align: center;
     justify-content: center;
-    font-size: 3em;
+    font-size: 2em;
 
     position: relative;
     top: 5pt;
@@ -72,7 +72,7 @@ a {
 
 @media (max-width: 800px) { 
     .name { 
-        font-size: 10vw;
+        font-size: 5em;
     }
     
 }
@@ -380,6 +380,7 @@ svg path:nth-child(4){
 }
 
 @media (max-width: 575px) {
+
     .wavecontainer {
         position: fixed;
         bottom: -10px; /* Adjust this value to make the waves visible on mobile */
@@ -435,4 +436,22 @@ svg path:nth-child(4){
     padding-bottom: 10pt;
     position: relative;
     top: -5pt
+}
+
+
+@media (max-width: 575px) {
+.darkmodebutton {
+    width: 20%;
+    padding-bottom: 10pt;
+    position: relative;
+    top: -5pt
+
+}
+
+.name {
+    font-size: 2em;
+    position: relative;
+    top: 10pt
+}
+
 }
