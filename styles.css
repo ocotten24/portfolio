@@ -189,6 +189,14 @@ a {
     overflow: auto;
 }
 
+.project-container {
+    background-color: white; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+}
+
 .aboutpopup {
     display: none;
     justify-content: space-around;
@@ -262,8 +270,6 @@ a {
     margin: auto;
     padding: 15pt;
     width: 80%;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
     z-index: 0;
     border-radius: 10pt;
     font-size: 2em;
@@ -383,7 +389,7 @@ svg path:nth-child(4){
 
     .wavecontainer {
         position: fixed;
-        bottom: -10px; /* Adjust this value to make the waves visible on mobile */
+        bottom: -10px; 
         height: 20%;
         width: 100%;
         height: auto;
@@ -408,7 +414,7 @@ svg path:nth-child(4){
     background-color: black;
     color: #CC5A71;
 
-    .aboutpopup, .projectpopup, .contactpopup, .skillpopup, .projectdescription, .projecttext {
+    .aboutpopup, .contactpopup, .skillpopup, .projectdescription, .projecttext, .project-container {
         background-color: black;
         color: white;
     }
