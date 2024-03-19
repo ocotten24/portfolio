@@ -22,7 +22,7 @@ a {
 .hovertext:hover {
     position: relative;
     top: -6pt;
-    transition: 2s;
+
     text-decoration:underline;
 }
 
@@ -302,6 +302,20 @@ a {
     
 }
 
+.projectlink {
+    margin: auto;
+    text-align: center;
+    color: black;
+    
+}
+
+.projectlink:hover {
+    margin: auto;
+    text-align: center;
+    color: #CC5A71;
+    
+}
+
 .projectline {
     width: 100%;
     background-color: #CC5A71;
@@ -322,8 +336,7 @@ a {
 }
 
 .centered-link:hover {
-    font-size: 1.2em;
-    transition: .9s;
+    color: #CC5A71;
 }
 
 .abouttext {
@@ -414,9 +427,13 @@ svg path:nth-child(4){
     background-color: black;
     color: #CC5A71;
 
-    .aboutpopup, .contactpopup, .skillpopup, .projectdescription, .projecttext, .project-container {
+    .aboutpopup, .contactpopup, .skillpopup, .projectdescription, .projecttext, .project-container, .projectlink {
         background-color: black;
         color: white;
+    }
+
+    .projectlink:hover {
+        color: #CC5A71;
     }
 
     .icon {
